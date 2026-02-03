@@ -1,13 +1,13 @@
-# Python
-__pycache__/
-*.pyc
+# Virtual environment
+venv/
 
 # Environment variables
 .env
 
-# VS Code
-.vscode/
+# Python cache
+__pycache__/
+*.pyc
 
-# OS files
-Thumbs.db
+# OS / editor junk
 .DS_Store
+.vscode/

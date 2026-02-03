@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Voice Activation</title>
+</head>
+<body>
+    <div id="status">Listening for activation...</div>
+    <div id="output"></div>
+    <script>
+        const status = document.getElementById('status');
+        const output = document.getElementById('output');
+        let recognition;
+        let isListening = false;
+
+        function startRecognition() {
+            if (isListening) return;
+            
+            recognition = new webkitSpeechRecognition() || new SpeechRecognition();
+            recognition.lang = 'en-US';
+            recognition.continuous = true;
+            recognition.interimResults = true;
+
+            recognition.onstart = function() {
+                isListening = true;
+                status.textContent = 'Listening for activation...';
+            };
+
+            recognition.onresult = function(event) {
+                const transcript = event.results[event.results.length - 1][0].transcript;
+                output.textContent = transcript;
+                
+                // Check for activation phrases
+                if (transcript.toLowerCase().includes('Aura') || 
+                    transcript.toLowerCase().includes('hey Aura')) {
+                    status.textContent = 'ACTIVATED!';
+                    status.style.color = 'green';
+                    status.style.fontWeight = 'bold';
+                }
+            };
+
+            recognition.onerror = function(event) {
+                console.log('Recognition error:', event.error);
+                isListening = false;
+                setTimeout(startRecognition, 1000);
+            };
+
+            recognition.onend = function() {
+                isListening = false;
+                setTimeout(startRecognition, 1000);
+            };
+
+            recognition.start();
+        }
+
+        // Start recognition when page loads
+        window.onload = function() {
+            startRecognition();
+        };
+    </script>
+</body>
+</html>

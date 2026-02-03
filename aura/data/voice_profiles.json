@@ -1,0 +1,56 @@
+{
+    "DemoUser": {
+        "name": "DemoUser",
+        "features": {
+            "mean_amplitude": 100.66629914314517,
+            "max_amplitude": 4377.666666666667,
+            "std_amplitude": 363.9514456204224,
+            "zero_crossings": 10546.666666666666,
+            "duration": 1.984
+        },
+        "samples": 3,
+        "audio_files": [
+            "data/voice_profiles\\DemoUser_sample_1.wav",
+            "data/voice_profiles\\DemoUser_sample_2.wav",
+            "data/voice_profiles\\DemoUser_sample_3.wav"
+        ],
+        "created_at": "2025-09-27 16:12:38",
+        "format": "simple"
+    },
+    "Janhvi": {
+        "name": "Janhvi",
+        "features": {
+            "mean_amplitude": 18.640929519489244,
+            "max_amplitude": 417.3333333333333,
+            "std_amplitude": 41.03165347327762,
+            "zero_crossings": 9046.0,
+            "duration": 1.984
+        },
+        "samples": 3,
+        "audio_files": [
+            "data/voice_profiles\\Janhvi_sample_1.wav",
+            "data/voice_profiles\\Janhvi_sample_2.wav",
+            "data/voice_profiles\\Janhvi_sample_3.wav"
+        ],
+        "created_at": "2025-10-02 23:08:53",
+        "format": "unified"
+    },
+    "Janhvi02": {
+        "name": "Janhvi02",
+        "features": {
+            "mean_amplitude": 175.2146652385753,
+            "max_amplitude": 4409.0,
+            "std_amplitude": 415.87325603338377,
+            "zero_crossings": 9061.0,
+            "duration": 1.984
+        },
+        "samples": 3,
+        "audio_files": [
+            "data/voice_profiles\\Janhvi02_sample_1.wav",
+            "data/voice_profiles\\Janhvi02_sample_2.wav",
+            "data/voice_profiles\\Janhvi02_sample_3.wav"
+        ],
+        "created_at": "2025-10-02 23:10:01",
+        "format": "unified"
+    }
+}

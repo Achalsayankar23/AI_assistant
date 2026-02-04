@@ -27,4 +27,3 @@ content using AI, and executing system commands.
 
 ---
 
-## 📂 Project Structure
